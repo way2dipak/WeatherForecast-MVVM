@@ -9,16 +9,36 @@
 import UIKit
 
 class CityTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var cityNameLabel: UILabel!
+    @IBOutlet weak var tempLabel: UILabel!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func setValue(details: WeatherViewModel) {
+        DispatchQueue.main.async {
+            if details.weather != nil {
+                self.spinner.stopAnimating()
+                self.spinner.isHidden = true
+                self.tempLabel.text = details.weather?.convertToCelsius().formatAsDegree
+            }
+            else {
+                self.spinner.isHidden = false
+                self.spinner.startAnimating()
+                self.tempLabel.text = ""
+            }
+        }
+    }
+    
+    func displayCityNotAvailabel() {
+        DispatchQueue.main.async {
+            self.spinner.stopAnimating()
+            self.spinner.isHidden = true
+            self.tempLabel.text = "-NA-"
+        }
     }
     
 }

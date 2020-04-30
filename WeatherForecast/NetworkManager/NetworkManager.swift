@@ -29,14 +29,14 @@ class NetworkManager {
     private var task: URLSessionDataTask? = nil
     
     func httpRequestWith<T : Codable>(link: String, method: HTTPMethod, headers: [String:String], params: [String:Any], model: T.Type, onSuccess: @escaping((T)->()), onFailure: @escaping((String)->())) {
-        let url = URL(string: link)!
+        let url = URL(string: link.replacingOccurrences(of: " ", with: "%20"))!
         var urlRequest = URLRequest(url: url)
+        print("URLRequest: \(urlRequest)")
         if headers.count != 0 {
             urlRequest.allHTTPHeaderFields = headers
         }
         else {
             urlRequest.allHTTPHeaderFields = [
-                "yazhi_token": Constant.shared.getYazhiToken(),
                 "content-type": "application/json"
             ]
         }
