@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D108EF2245B1FD00086D2B1 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D108EF1245B1FD00086D2B1 /* FileManager.swift */; };
 		9D4C61542457FD37008C3824 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4C61532457FD37008C3824 /* WeatherModel.swift */; };
 		9D4C615624580486008C3824 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4C615524580486008C3824 /* WeatherViewModel.swift */; };
 		9D4C615824580924008C3824 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4C615724580924008C3824 /* HomeService.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D108EF1245B1FD00086D2B1 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		9D4C61532457FD37008C3824 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		9D4C615524580486008C3824 /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 		9D4C615724580924008C3824 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
@@ -51,6 +53,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D108EF0245B1F980086D2B1 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				9D108EF1245B1FD00086D2B1 /* FileManager.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
 		9DDF5B752456922A00521D21 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +80,7 @@
 		9DDF5B802456922A00521D21 /* WeatherForecast */ = {
 			isa = PBXGroup;
 			children = (
+				9D108EF0245B1F980086D2B1 /* UserDefaults */,
 				9DDF5B9724569ACD00521D21 /* NetworkManager */,
 				9DDF5B9F2456B8D300521D21 /* Home */,
 				9DDF5B9B2456B76900521D21 /* SettingViewController.swift */,
@@ -213,6 +224,7 @@
 				9DDF5B9624569A3E00521D21 /* NetworkManager.swift in Sources */,
 				9D4C61542457FD37008C3824 /* WeatherModel.swift in Sources */,
 				9DDF5B862456922A00521D21 /* ViewController.swift in Sources */,
+				9D108EF2245B1FD00086D2B1 /* FileManager.swift in Sources */,
 				9D4C615624580486008C3824 /* WeatherViewModel.swift in Sources */,
 				9D4C615824580924008C3824 /* HomeService.swift in Sources */,
 				9DDF5B822456922A00521D21 /* AppDelegate.swift in Sources */,
